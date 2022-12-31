@@ -47,17 +47,25 @@ main {
     flex-direction: column;
     width:90%;
     margin:0 auto;
+
   nav {
     display:flex;
     margin-top:1rem;
+
+    .twitter {
+      margin-left:auto;
+    }
+
     .socials {
-      color: $main-color;
+      color: $dark-color;
       position: relative;
       display: flex;
       justify-content: center;
       transform: scale(1);
       width:40px;
       height:40px;
+      margin-right:2rem;
+
       &::before {
         content: "";
         background-color: $accent-color;
@@ -70,10 +78,12 @@ main {
         opacity: 0;
         transition: transform 300ms, opacity 200ms;
       }
+
       &:hover::before {
         transform: scale(1);
         opacity: 1;
       }
+      
       i {
         align-self: center;
        font-size: 1.5rem;
@@ -81,13 +91,21 @@ main {
     }
   }
 
-  .top-text {
-    
+  .top-text-wrapper {
     display:flex;
-    margin-top:2rem;
+    margin-top:3.5rem;
     h2 {
         margin-right:1rem;
         font-size:0.9rem;
+        transform: translateX(150%);
+        transition:transform ease-in-out 700ms;
+        span {
+            margin: 0 1rem;
+        }
+
+        @media (min-width:800px) {
+          margin-left:3rem;
+        }
     }
   }
 
@@ -95,10 +113,27 @@ main {
     margin-top:3rem;
     h1 {
         font-size:3rem;
-        transform: translateX(-100%);
-        transition:transform ease-in 250ms;
+        transform: translateX(-75%);
+        transition:transform ease-in-out 700ms;
+        @media (min-width: 800px) {
+          font-size:5rem;
+          width:75%;
+          margin-left:3rem;
+        }
     }
   }
+
+  .description-text-wrapper {
+    margin-left:auto;
+    margin-top:2rem;
+
+    .email-copy {
+      cursor:pointer;
+
+    }
+  }
+
+  
 }
 
 @keyframes spin {

@@ -43,14 +43,18 @@ main nav {
   display: flex;
   margin-top: 1rem;
 }
+main nav .twitter {
+  margin-left: auto;
+}
 main nav .socials {
-  color: #800000;
+  color: #303030;
   position: relative;
   display: flex;
   justify-content: center;
   transform: scale(1);
   width: 40px;
   height: 40px;
+  margin-right: 2rem;
 }
 main nav .socials::before {
   content: "";
@@ -72,21 +76,45 @@ main nav .socials i {
   align-self: center;
   font-size: 1.5rem;
 }
-main .top-text {
+main .top-text-wrapper {
   display: flex;
-  margin-top: 2rem;
+  margin-top: 3.5rem;
 }
-main .top-text h2 {
+main .top-text-wrapper h2 {
   margin-right: 1rem;
   font-size: 0.9rem;
+  transform: translateX(150%);
+  transition: transform ease-in-out 700ms;
+}
+main .top-text-wrapper h2 span {
+  margin: 0 1rem;
+}
+@media (min-width: 800px) {
+  main .top-text-wrapper h2 {
+    margin-left: 3rem;
+  }
 }
 main .main-text-wrapper {
   margin-top: 3rem;
 }
 main .main-text-wrapper h1 {
   font-size: 3rem;
-  transform: translateX(-100%);
-  transition: transform ease-in 250ms;
+  transform: translateX(-75%);
+  transition: transform ease-in-out 700ms;
+}
+@media (min-width: 800px) {
+  main .main-text-wrapper h1 {
+    font-size: 5rem;
+    width: 75%;
+    margin-left: 3rem;
+  }
+}
+main .description-text-wrapper {
+  margin-left: auto;
+  margin-top: 2rem;
+}
+main .description-text-wrapper .email-copy {
+  cursor: pointer;
 }
 
 @-webkit-keyframes spin {
