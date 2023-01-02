@@ -1,6 +1,7 @@
 const spinner = document.querySelector('.spinner-wrapper')
 const mainText = document.querySelector('.main-text')
 const topText = document.querySelector('.top-text')
+const descriptionText = document.querySelector('.description-text-wrapper')
 const myTime = document.querySelector('.my-time')
 
 window.addEventListener('load', function() {
@@ -10,6 +11,7 @@ window.addEventListener('load', function() {
     })
     mainText.classList.add('transform-back-x')
     topText.classList.add('transform-back-x')
+    descriptionText.classList.add('transform-back-x')
     // Gets the current time in the Philippines
     var d = new Date() 
     var utc = d.getTime() + (d.getTimezoneOffset() * 60000)
