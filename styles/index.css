@@ -128,35 +128,66 @@ main .description-text-wrapper {
   transform: translateX(100%);
   transition: transform ease-in-out 700ms;
 }
+@media (max-width: 800px) {
+  main .description-text-wrapper {
+    margin-left: 0.5rem;
+  }
+}
 main .email-copy {
   cursor: pointer;
   border: 1px #673147 solid;
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
-  margin-top: 1rem;
   margin-left: 3rem;
   width: 270px;
   position: relative;
   background-color: #f8c820;
   overflow: hidden;
 }
+@media (max-width: 800px) {
+  main .email-copy {
+    margin-left: 0.5rem;
+    margin-top: 2rem;
+  }
+}
 main .email-copy:before {
-  content: "";
-  background-color: rgb(249, 249, 249);
+  content: "Click to Copy";
+  background-color: rgba(255, 235, 209, 0.5294117647);
   position: absolute;
+  display: grid;
+  place-items: center;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   transform: skew(0, 60deg) rotate(10deg) translateY(350px);
-  transition: transform 400ms;
+  transition: transform 300ms;
+  color: #303030;
 }
 main .email-copy:hover:before {
   transform: skew(0, 0) rotate(0) translateY(0);
 }
 main .email-copy:hover .email-address {
   transform: scale(0.96);
+  opacity: 0.2;
+}
+main .email-copy::after {
+  content: "Copied";
+  background-color: rgba(255, 235, 209, 0.5294117647);
+  position: absolute;
+  place-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 999;
+  -webkit-animation: show-after 0.5s ease-out 1;
+          animation: show-after 0.5s ease-out 1;
+}
+main .email-copy.active::after {
+  display: grid;
 }
 main .email-copy .email-address {
   transition: all ease-in 250ms;
@@ -204,5 +235,21 @@ main .email-copy .fa-discord {
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes show-after {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes show-after {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
