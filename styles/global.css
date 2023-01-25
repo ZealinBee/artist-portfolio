@@ -24,7 +24,7 @@ img {
 
 ::-webkit-scrollbar {
   width: 10px;
-  background-color: rgba(179, 145, 24, 0.6941176471);
+  background-color: rgba(179, 145, 24, 0.537254902);
 }
 
 /* Webkit (Chrome, Safari) - thumb */
