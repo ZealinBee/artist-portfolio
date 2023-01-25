@@ -24,7 +24,7 @@ img {
 
 ::-webkit-scrollbar {
   width: 10px;
-  background-color: #f5f5f5;
+  background-color: rgba(179, 145, 24, 0.6941176471);
 }
 
 /* Webkit (Chrome, Safari) - thumb */
@@ -38,4 +38,13 @@ img {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #8c3f62;
+}
+
+footer {
+  background: #673147;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  padding: 0.75rem 0;
 }
