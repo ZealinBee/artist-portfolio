@@ -41,10 +41,12 @@ img {
 }
 
 footer {
-  background: #673147;
+  background: rgba(90, 43, 62, 0.9098039216);
   color: white;
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
   padding: 0.75rem 0;
+  width: 100%;
+  bottom: 0;
+  margin-top: 1.5rem;
 }

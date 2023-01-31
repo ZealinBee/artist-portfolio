@@ -232,6 +232,9 @@ main .email-copy .fa-discord {
     font-size: 1rem;
   }
 }
+.filtering-buttons button:hover {
+  opacity: 0.8;
+}
 .filtering-buttons .selected-button {
   color: #f8c820;
   border: 2px #f8c820 solid;

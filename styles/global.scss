@@ -41,10 +41,12 @@ img {
 }
 
 footer {
-  background:$main-color;
+  background:#5a2b3ee8;
   color:white;
   display:flex;
   justify-content: center;
-  margin-top:3rem;
   padding:0.75rem 0;
+  width:100%;
+  bottom:0;
+  margin-top:1.5rem;
 }
